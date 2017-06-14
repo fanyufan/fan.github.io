@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>fan的技术博客</title>
-  <subtitle>Talk is cheap, show me the code.</subtitle>
+  <title>fan&#39;s blog</title>
+  <subtitle>Talk is cheap. Show me the code.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-13T04:11:48.443Z</updated>
+  <updated>2017-06-13T10:18:35.273Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://yoursite.com/2017/06/13/hello-hexo/"/>
     <id>http://yoursite.com/2017/06/13/hello-hexo/</id>
     <published>2017-06-13T04:10:25.000Z</published>
-    <updated>2017-06-13T04:11:48.443Z</updated>
+    <updated>2017-06-13T10:18:35.273Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/2017/06/13/hello-hexo/hexo-logo.png" alt="hexo-logo.png"><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+    <content type="html"><![CDATA[<p><img src="/2017/06/13/hello-hexo/hexo-logo.png" alt="hexo-logo.png"></p>
+<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -35,7 +36,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/2017/06/13/hello-hexo/hexo-logo.png&quot; alt=&quot;hexo-logo.png&quot;&gt;&lt;br&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;extern
+      &lt;p&gt;&lt;img src=&quot;/2017/06/13/hello-hexo/hexo-logo.png&quot; alt=&quot;hexo-logo.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;ex
     
     </summary>
     
@@ -69,7 +71,7 @@
     <link href="http://yoursite.com/2017/06/12/my-first-article/"/>
     <id>http://yoursite.com/2017/06/12/my-first-article/</id>
     <published>2017-06-12T02:19:37.934Z</published>
-    <updated>2017-06-13T10:07:27.175Z</updated>
+    <updated>2017-06-13T10:08:27.180Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <p>title: my first article<br>date: 2017-06-12 10:19:37</p>
@@ -92,7 +94,7 @@
     <link href="http://yoursite.com/2017/06/09/hello-world/"/>
     <id>http://yoursite.com/2017/06/09/hello-world/</id>
     <published>2017-06-09T10:32:32.265Z</published>
-    <updated>2017-06-13T10:07:01.691Z</updated>
+    <updated>2017-06-13T10:08:01.695Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="title-Hello-World"><a href="#title-Hello-World" class="headerlink" title="title: Hello World"></a>title: Hello World</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
