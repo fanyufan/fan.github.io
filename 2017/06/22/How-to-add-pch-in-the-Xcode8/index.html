@@ -4,20 +4,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>fan&#39;s blog</title>
+  <title>How to add pch in the Xcode8 | fan&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: my first articledate: 2017-06-12 10:19:37 tags:一篇文章">
+  <meta name="description" content="1 打开你的Xcode工程，在Supporting Files目录中，选择File&amp;gt;New&amp;gt;File&amp;gt;iOS&amp;gt;Other&amp;gt;PCH File 然后点击下一步。2 假设你的项目名称为TestDemo，你的PCH文件名称建议为TestDemo-Prefix.pch,然后创建。！create_pch.png3 选择 PCH 文件(文章的示例文件为 TestDemo-Prefi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fan&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/2017/06/12/my-first-article/index.html">
+<meta property="og:title" content="How to add pch in the Xcode8">
+<meta property="og:url" content="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/index.html">
 <meta property="og:site_name" content="fan&#39;s blog">
-<meta property="og:description" content="title: my first articledate: 2017-06-12 10:19:37 tags:一篇文章">
-<meta property="og:image" content="http://yoursite.com/2017/06/12/my-first-article/source/assets/images/wwdc-2017.jpg">
-<meta property="og:updated_time" content="2017-06-19T01:55:05.623Z">
+<meta property="og:description" content="1 打开你的Xcode工程，在Supporting Files目录中，选择File&amp;gt;New&amp;gt;File&amp;gt;iOS&amp;gt;Other&amp;gt;PCH File 然后点击下一步。2 假设你的项目名称为TestDemo，你的PCH文件名称建议为TestDemo-Prefix.pch,然后创建。！create_pch.png3 选择 PCH 文件(文章的示例文件为 TestDemo-Prefi">
+<meta property="og:image" content="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/pch.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/pch2.png">
+<meta property="og:updated_time" content="2017-06-22T02:16:33.764Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fan&#39;s blog">
-<meta name="twitter:description" content="title: my first articledate: 2017-06-12 10:19:37 tags:一篇文章">
-<meta name="twitter:image" content="http://yoursite.com/2017/06/12/my-first-article/source/assets/images/wwdc-2017.jpg">
+<meta name="twitter:title" content="How to add pch in the Xcode8">
+<meta name="twitter:description" content="1 打开你的Xcode工程，在Supporting Files目录中，选择File&amp;gt;New&amp;gt;File&amp;gt;iOS&amp;gt;Other&amp;gt;PCH File 然后点击下一步。2 假设你的项目名称为TestDemo，你的PCH文件名称建议为TestDemo-Prefix.pch,然后创建。！create_pch.png3 选择 PCH 文件(文章的示例文件为 TestDemo-Prefi">
+<meta name="twitter:image" content="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/pch.png">
   
     <link rel="alternative" href="/atom.xml" title="fan&#39;s blog" type="application/atom+xml">
   
@@ -73,31 +74,39 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-my-first-article" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-How-to-add-pch-in-the-Xcode8" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/12/my-first-article/" class="article-date">
-  <time datetime="2017-06-12T02:19:37.934Z" itemprop="datePublished">2017-06-12</time>
+    <a href="/2017/06/22/How-to-add-pch-in-the-Xcode8/" class="article-date">
+  <time datetime="2017-06-22T01:52:47.000Z" itemprop="datePublished">2017-06-22</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      How to add pch in the Xcode8
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: my first article<br>date: 2017-06-12 10:19:37</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><h1 id="一篇文章"><a href="#一篇文章" class="headerlink" title="一篇文章"></a>一篇文章</h1><p><img src="/2017/06/12/my-first-article/source/assets/images/wwdc-2017.jpg" alt="wwdc 2017"></p>
+        <p>1 打开你的Xcode工程，在Supporting Files目录中，选择File&gt;New&gt;File&gt;iOS&gt;Other&gt;PCH File 然后点击下一步。<br>2 假设你的项目名称为TestDemo，你的PCH文件名称建议为TestDemo-Prefix.pch,然后创建。<br>！<a href="create_pch.png">create_pch.png</a><br>3 选择 PCH 文件(文章的示例文件为 TestDemo-Prefix.pch) ,可以看到里面的内容如下:<br><img src="/2017/06/22/How-to-add-pch-in-the-Xcode8/pch.png" alt="pch.png"><br>4 找到 Project &gt; Build Settings &gt; 搜索 “Prefix Header“；<br>5 “Apple LLVM 8.0 -Language″ (配图是Xcode7， 7和8是一样的)栏目中你将会看到 Prefix Header 关键字；<br>6 输入: TestDemo/TestDemo-Prefix.pch (如 TestDemo/TestDemo-Prefix.pch )；如果你的pch文件名为TestDemo.pch, 那么这里就应该为TestDemo/TestDemo.pch<br>7 将Precompile Prefix Header为YES，预编译后的pch文件会被缓存起来，可以提高编译速度。效果如下<br><img src="/2017/06/22/How-to-add-pch-in-the-Xcode8/pch2.png" alt="pch2.png"><br>8 Clean 并且 build 你的项目.就是这样！Done！现在你可以使用你的 PCH 文件就像你使用老版本的Xcode一样了</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2017/06/12/my-first-article/" data-id="cj47sr2g70001g0i6ap5vmzjb" class="article-share-link" data-share="baidu" data-title="">Share</a>
+        <a data-url="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/" data-id="cj47sr2fc0000g0i6p4cvs3m5" class="article-share-link" data-share="baidu" data-title="How to add pch in the Xcode8">Share</a>
       
 
       
-        <a href="http://yoursite.com/2017/06/12/my-first-article/#ds-thread" class="article-comment-link">Comments</a>
+        <a href="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/#ds-thread" class="article-comment-link">Comments</a>
       
 
       
@@ -107,19 +116,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/06/13/second-article/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          second article
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/06/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/06/14/objc-runtime/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">objc runtime</div>
     </a>
   
 </nav>
@@ -129,7 +129,7 @@
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2017/06/12/my-first-article/" data-title="" data-url="http://yoursite.com/2017/06/12/my-first-article/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2017/06/22/How-to-add-pch-in-the-Xcode8/" data-title="How to add pch in the Xcode8" data-url="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/"></div>
   </section>
 </section>
       

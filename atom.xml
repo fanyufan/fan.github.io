@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-13T10:18:35.273Z</updated>
+  <updated>2017-06-22T02:16:33.764Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to add pch in the Xcode8</title>
+    <link href="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/"/>
+    <id>http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/</id>
+    <published>2017-06-22T01:52:47.000Z</published>
+    <updated>2017-06-22T02:16:33.764Z</updated>
+    
+    <content type="html"><![CDATA[<p>1 打开你的Xcode工程，在Supporting Files目录中，选择File&gt;New&gt;File&gt;iOS&gt;Other&gt;PCH File 然后点击下一步。<br>2 假设你的项目名称为TestDemo，你的PCH文件名称建议为TestDemo-Prefix.pch,然后创建。<br>！<a href="create_pch.png">create_pch.png</a><br>3 选择 PCH 文件(文章的示例文件为 TestDemo-Prefix.pch) ,可以看到里面的内容如下:<br><img src="/2017/06/22/How-to-add-pch-in-the-Xcode8/pch.png" alt="pch.png"><br>4 找到 Project &gt; Build Settings &gt; 搜索 “Prefix Header“；<br>5 “Apple LLVM 8.0 -Language″ (配图是Xcode7， 7和8是一样的)栏目中你将会看到 Prefix Header 关键字；<br>6 输入: TestDemo/TestDemo-Prefix.pch (如 TestDemo/TestDemo-Prefix.pch )；如果你的pch文件名为TestDemo.pch, 那么这里就应该为TestDemo/TestDemo.pch<br>7 将Precompile Prefix Header为YES，预编译后的pch文件会被缓存起来，可以提高编译速度。效果如下<br><img src="/2017/06/22/How-to-add-pch-in-the-Xcode8/pch2.png" alt="pch2.png"><br>8 Clean 并且 build 你的项目.就是这样！Done！现在你可以使用你的 PCH 文件就像你使用老版本的Xcode一样了</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1 打开你的Xcode工程，在Supporting Files目录中，选择File&amp;gt;New&amp;gt;File&amp;gt;iOS&amp;gt;Other&amp;gt;PCH File 然后点击下一步。&lt;br&gt;2 假设你的项目名称为TestDemo，你的PCH文件名称建议为TestDemo
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>objc runtime</title>
+    <link href="http://yoursite.com/2017/06/14/objc-runtime/"/>
+    <id>http://yoursite.com/2017/06/14/objc-runtime/</id>
+    <published>2017-06-14T03:48:24.000Z</published>
+    <updated>2017-06-14T03:48:24.173Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/14/runtime/"/>
+    <id>http://yoursite.com/2017/06/14/runtime/</id>
+    <published>2017-06-14T03:34:02.844Z</published>
+    <updated>2017-06-19T01:54:52.292Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>title: runtime<br>date: 2017-06-14 11:34:02</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;title: runtime&lt;br&gt;date: 2017-06-14 11:34:02&lt;/p&gt;
+&lt;h2 id=&quot;tags&quot;&gt;&lt;a href=&quot;#tags&quot; class=&quot;headerlink&quot; title=&quot;tags:&quot;&gt;&lt;/a&gt;tags:&lt;/h2&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>hello hexo</title>
@@ -71,7 +126,7 @@
     <link href="http://yoursite.com/2017/06/12/my-first-article/"/>
     <id>http://yoursite.com/2017/06/12/my-first-article/</id>
     <published>2017-06-12T02:19:37.934Z</published>
-    <updated>2017-06-13T10:08:27.180Z</updated>
+    <updated>2017-06-19T01:55:05.623Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <p>title: my first article<br>date: 2017-06-12 10:19:37</p>
@@ -94,7 +149,7 @@
     <link href="http://yoursite.com/2017/06/09/hello-world/"/>
     <id>http://yoursite.com/2017/06/09/hello-world/</id>
     <published>2017-06-09T10:32:32.265Z</published>
-    <updated>2017-06-13T10:08:01.695Z</updated>
+    <updated>2017-06-19T01:54:41.165Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="title-Hello-World"><a href="#title-Hello-World" class="headerlink" title="title: Hello World"></a>title: Hello World</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
