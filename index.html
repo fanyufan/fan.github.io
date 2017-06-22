@@ -91,17 +91,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##OC代码获取iOS设备型号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line">// 需要#import &lt;sys/utsname.h&gt;</div><div class="line">+ (NSString*)deviceModelName</div><div class="line">&#123;</div><div class="line">    struct utsname systemInfo;</div><div class="line">    uname(&amp;systemInfo);</div><div class="line">    NSString *deviceModel = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];</div><div class="line"></div><div class="line">    //iPhone 系列</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone1,1&quot;])    return @&quot;iPhone 1G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone1,2&quot;])    return @&quot;iPhone 3G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone2,1&quot;])    return @&quot;iPhone 3GS&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone3,1&quot;])    return @&quot;iPhone 4&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone3,2&quot;])    return @&quot;Verizon iPhone 4&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone4,1&quot;])    return @&quot;iPhone 4S&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone5,1&quot;])    return @&quot;iPhone 5&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone5,2&quot;])    return @&quot;iPhone 5&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone5,3&quot;])    return @&quot;iPhone 5C&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone5,4&quot;])    return @&quot;iPhone 5C&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone6,1&quot;])    return @&quot;iPhone 5S&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone6,2&quot;])    return @&quot;iPhone 5S&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone7,1&quot;])    return @&quot;iPhone 6 Plus&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone7,2&quot;])    return @&quot;iPhone 6&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone8,1&quot;])    return @&quot;iPhone 6s&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone8,2&quot;])    return @&quot;iPhone 6s Plus&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone9,1&quot;])    return @&quot;iPhone 7 (CDMA)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone9,3&quot;])    return @&quot;iPhone 7 (GSM)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone9,2&quot;])    return @&quot;iPhone 7 Plus (CDMA)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone9,4&quot;])    return @&quot;iPhone 7 Plus (GSM)&quot;;</div><div class="line"></div><div class="line">    //iPod 系列</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPod1,1&quot;])      return @&quot;iPod Touch 1G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPod2,1&quot;])      return @&quot;iPod Touch 2G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPod3,1&quot;])      return @&quot;iPod Touch 3G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPod4,1&quot;])      return @&quot;iPod Touch 4G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPod5,1&quot;])      return @&quot;iPod Touch 5G&quot;;</div><div class="line"></div><div class="line">    //iPad 系列</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad1,1&quot;])      return @&quot;iPad&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,1&quot;])      return @&quot;iPad 2 (WiFi)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,2&quot;])      return @&quot;iPad 2 (GSM)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,3&quot;])      return @&quot;iPad 2 (CDMA)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,4&quot;])      return @&quot;iPad 2 (32nm)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,5&quot;])      return @&quot;iPad mini (WiFi)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,6&quot;])      return @&quot;iPad mini (GSM)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,7&quot;])      return @&quot;iPad mini (CDMA)&quot;;</div><div class="line"></div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,1&quot;])      return @&quot;iPad 3(WiFi)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,2&quot;])      return @&quot;iPad 3(CDMA)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,3&quot;])      return @&quot;iPad 3(4G)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,4&quot;])      return @&quot;iPad 4 (WiFi)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,5&quot;])      return @&quot;iPad 4 (4G)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,6&quot;])      return @&quot;iPad 4 (CDMA)&quot;;</div><div class="line"></div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad4,1&quot;])      return @&quot;iPad Air&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad4,2&quot;])      return @&quot;iPad Air&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad4,3&quot;])      return @&quot;iPad Air&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad5,3&quot;])      return @&quot;iPad Air 2&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad5,4&quot;])      return @&quot;iPad Air 2&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;i386&quot;])         return @&quot;Simulator&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;x86_64&quot;])       return @&quot;Simulator&quot;;</div><div class="line"></div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad4,4&quot;]</div><div class="line">        ||[deviceModel isEqualToString:@&quot;iPad4,5&quot;]</div><div class="line">        ||[deviceModel isEqualToString:@&quot;iPad4,6&quot;])      return @&quot;iPad mini 2&quot;;</div><div class="line"></div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad4,7&quot;]</div><div class="line">        ||[deviceModel isEqualToString:@&quot;iPad4,8&quot;]</div><div class="line">        ||[deviceModel isEqualToString:@&quot;iPad4,9&quot;])      return @&quot;iPad mini 3&quot;;</div><div class="line"></div><div class="line">    return deviceModel;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h2 id="OC代码获取iOS设备型号"><a href="#OC代码获取iOS设备型号" class="headerlink" title="OC代码获取iOS设备型号"></a>OC代码获取iOS设备型号</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line">// 需要#import &lt;sys/utsname.h&gt;</div><div class="line">+ (NSString*)deviceModelName</div><div class="line">&#123;</div><div class="line">    struct utsname systemInfo;</div><div class="line">    uname(&amp;systemInfo);</div><div class="line">    NSString *deviceModel = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];</div><div class="line"></div><div class="line">    //iPhone 系列</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone1,1&quot;])    return @&quot;iPhone 1G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone1,2&quot;])    return @&quot;iPhone 3G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone2,1&quot;])    return @&quot;iPhone 3GS&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone3,1&quot;])    return @&quot;iPhone 4&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone3,2&quot;])    return @&quot;Verizon iPhone 4&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone4,1&quot;])    return @&quot;iPhone 4S&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone5,1&quot;])    return @&quot;iPhone 5&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone5,2&quot;])    return @&quot;iPhone 5&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone5,3&quot;])    return @&quot;iPhone 5C&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone5,4&quot;])    return @&quot;iPhone 5C&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone6,1&quot;])    return @&quot;iPhone 5S&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone6,2&quot;])    return @&quot;iPhone 5S&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone7,1&quot;])    return @&quot;iPhone 6 Plus&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone7,2&quot;])    return @&quot;iPhone 6&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone8,1&quot;])    return @&quot;iPhone 6s&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone8,2&quot;])    return @&quot;iPhone 6s Plus&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone9,1&quot;])    return @&quot;iPhone 7 (CDMA)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone9,3&quot;])    return @&quot;iPhone 7 (GSM)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone9,2&quot;])    return @&quot;iPhone 7 Plus (CDMA)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPhone9,4&quot;])    return @&quot;iPhone 7 Plus (GSM)&quot;;</div><div class="line"></div><div class="line">    //iPod 系列</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPod1,1&quot;])      return @&quot;iPod Touch 1G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPod2,1&quot;])      return @&quot;iPod Touch 2G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPod3,1&quot;])      return @&quot;iPod Touch 3G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPod4,1&quot;])      return @&quot;iPod Touch 4G&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPod5,1&quot;])      return @&quot;iPod Touch 5G&quot;;</div><div class="line"></div><div class="line">    //iPad 系列</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad1,1&quot;])      return @&quot;iPad&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,1&quot;])      return @&quot;iPad 2 (WiFi)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,2&quot;])      return @&quot;iPad 2 (GSM)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,3&quot;])      return @&quot;iPad 2 (CDMA)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,4&quot;])      return @&quot;iPad 2 (32nm)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,5&quot;])      return @&quot;iPad mini (WiFi)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,6&quot;])      return @&quot;iPad mini (GSM)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad2,7&quot;])      return @&quot;iPad mini (CDMA)&quot;;</div><div class="line"></div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,1&quot;])      return @&quot;iPad 3(WiFi)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,2&quot;])      return @&quot;iPad 3(CDMA)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,3&quot;])      return @&quot;iPad 3(4G)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,4&quot;])      return @&quot;iPad 4 (WiFi)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,5&quot;])      return @&quot;iPad 4 (4G)&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad3,6&quot;])      return @&quot;iPad 4 (CDMA)&quot;;</div><div class="line"></div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad4,1&quot;])      return @&quot;iPad Air&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad4,2&quot;])      return @&quot;iPad Air&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad4,3&quot;])      return @&quot;iPad Air&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad5,3&quot;])      return @&quot;iPad Air 2&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad5,4&quot;])      return @&quot;iPad Air 2&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;i386&quot;])         return @&quot;Simulator&quot;;</div><div class="line">    if ([deviceModel isEqualToString:@&quot;x86_64&quot;])       return @&quot;Simulator&quot;;</div><div class="line"></div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad4,4&quot;]</div><div class="line">        ||[deviceModel isEqualToString:@&quot;iPad4,5&quot;]</div><div class="line">        ||[deviceModel isEqualToString:@&quot;iPad4,6&quot;])      return @&quot;iPad mini 2&quot;;</div><div class="line"></div><div class="line">    if ([deviceModel isEqualToString:@&quot;iPad4,7&quot;]</div><div class="line">        ||[deviceModel isEqualToString:@&quot;iPad4,8&quot;]</div><div class="line">        ||[deviceModel isEqualToString:@&quot;iPad4,9&quot;])      return @&quot;iPad mini 3&quot;;</div><div class="line"></div><div class="line">    return deviceModel;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2017/06/22/How-to-get-iphone-s-information/" data-id="cj47uy9xi00043oi6fkc8ol8v" class="article-share-link" data-share="baidu" data-title="How to get iphone&#39;s information">分享到</a>
+        <a data-url="http://yoursite.com/2017/06/22/How-to-get-iphone-s-information/" data-id="cj47v3dja000148i6fsjuu1mp" class="article-share-link" data-share="baidu" data-title="How to get iphone&#39;s information">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2017/06/22/How-to-get-iphone-s-information/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2017/06/22/How-to-get-iphone-s-information/#ds-thread" class="article-comment-link">评论</a>
       
 
       
@@ -140,11 +139,11 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/" data-id="cj47uy9x800003oi6btznvsu4" class="article-share-link" data-share="baidu" data-title="How to add pch in the Xcode8">分享到</a>
+        <a data-url="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/" data-id="cj47v3dj5000048i6cz2vgmmt" class="article-share-link" data-share="baidu" data-title="How to add pch in the Xcode8">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2017/06/22/How-to-add-pch-in-the-Xcode8/#ds-thread" class="article-comment-link">评论</a>
       
 
       
@@ -182,11 +181,11 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2017/06/14/objc-runtime/" data-id="cj47uy9xh00033oi6tmqwbz24" class="article-share-link" data-share="baidu" data-title="objc runtime">分享到</a>
+        <a data-url="http://yoursite.com/2017/06/14/objc-runtime/" data-id="cj47v3dji000548i6spd20y48" class="article-share-link" data-share="baidu" data-title="objc runtime">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2017/06/14/objc-runtime/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2017/06/14/objc-runtime/#ds-thread" class="article-comment-link">评论</a>
       
 
       
@@ -216,11 +215,11 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2017/06/14/runtime/" data-id="cj47uy9xo00073oi6fnx3u0hr" class="article-share-link" data-share="baidu" data-title="">分享到</a>
+        <a data-url="http://yoursite.com/2017/06/14/runtime/" data-id="cj47v3djj000648i6vw0koqbi" class="article-share-link" data-share="baidu" data-title="">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2017/06/14/runtime/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2017/06/14/runtime/#ds-thread" class="article-comment-link">评论</a>
       
 
       
@@ -268,11 +267,11 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2017/06/13/hello-hexo/" data-id="cj47uy9xd00013oi693qc8p0s" class="article-share-link" data-share="baidu" data-title="hello hexo">分享到</a>
+        <a data-url="http://yoursite.com/2017/06/13/hello-hexo/" data-id="cj47v3dje000348i66e76av71" class="article-share-link" data-share="baidu" data-title="hello hexo">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2017/06/13/hello-hexo/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2017/06/13/hello-hexo/#ds-thread" class="article-comment-link">评论</a>
       
 
       
@@ -314,11 +313,11 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2017/06/13/second-article/" data-id="cj47uy9xn00063oi6m6c4fh7o" class="article-share-link" data-share="baidu" data-title="second article">分享到</a>
+        <a data-url="http://yoursite.com/2017/06/13/second-article/" data-id="cj47v3djk000748i68b0pvnd1" class="article-share-link" data-share="baidu" data-title="second article">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2017/06/13/second-article/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2017/06/13/second-article/#ds-thread" class="article-comment-link">评论</a>
       
 
       
@@ -349,11 +348,11 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2017/06/12/my-first-article/" data-id="cj47uy9xf00023oi6mpr08mfn" class="article-share-link" data-share="baidu" data-title="">分享到</a>
+        <a data-url="http://yoursite.com/2017/06/12/my-first-article/" data-id="cj47v3djf000448i68j0g5s2a" class="article-share-link" data-share="baidu" data-title="">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2017/06/12/my-first-article/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2017/06/12/my-first-article/#ds-thread" class="article-comment-link">评论</a>
       
 
       
@@ -406,11 +405,11 @@ More info: [Generating](https://hexo.io/docs/generating.html)
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2017/06/09/hello-world/" data-id="cj47uy9xl00053oi6x8v3aqna" class="article-share-link" data-share="baidu" data-title="">分享到</a>
+        <a data-url="http://yoursite.com/2017/06/09/hello-world/" data-id="cj47v3djc000248i6bn8946s2" class="article-share-link" data-share="baidu" data-title="">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2017/06/09/hello-world/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2017/06/09/hello-world/#ds-thread" class="article-comment-link">评论</a>
       
 
       
@@ -434,7 +433,7 @@ More info: [Generating](https://hexo.io/docs/generating.html)
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">歸檔</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">8</span></li></ul>
     </div>
@@ -474,7 +473,7 @@ More info: [Generating](https://hexo.io/docs/generating.html)
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">友情鏈接</h3>
+    <h3 class="widget-title">友情链接</h3>
     <div class="widget">
       <ul>
         
@@ -519,7 +518,7 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 </nav>
   <!-- totop start -->
 <div id="totop">
-<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 </div>
 
 <!-- totop end -->
